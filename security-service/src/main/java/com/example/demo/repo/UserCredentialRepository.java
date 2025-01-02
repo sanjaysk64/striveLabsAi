@@ -9,5 +9,5 @@ import com.example.demo.entity.UserCredential;
 
 @Repository
 public interface UserCredentialRepository extends JpaRepository<UserCredential, Integer> {
-	Optional<UserCredential> findByName(String username);
+	Optional<UserCredential> findByName(String username); 
 }
