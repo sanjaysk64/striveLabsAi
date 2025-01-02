@@ -1,0 +1,17 @@
+server:
+  port: 8761  # Port for Eureka Server
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  server:
+    # Disable self-preservation mode to avoid issues with instance expirations during development
+    enable-self-preservation: false
+
+  client:
+    # The Eureka server doesn't need to register with itself
+    register-with-eureka: false
+    fetch-registry: false
+

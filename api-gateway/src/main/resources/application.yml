@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+        - id: strive-labs-ai
+          uri: lb://STRIVE-LABS-AI-APP
+          predicates:
+            - Path=/api/**  # Match paths starting with /api/
+          filters:
+            - name: AuthenticationFilter  # Assuming you have an AuthenticationFilter
+            - name: TenantIdHeaderFilter
+           
+        - id: security-service
+          uri: lb://SECURITY-SERVICE
+          predicates:
+            - Path=/auth/**  # Match paths starting with /auth/
+            
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
