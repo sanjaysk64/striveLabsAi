@@ -1,0 +1,3 @@
+[submodule "security/strive-labs-ai"]
+	path = security/strive-labs-ai
+	url = https://github.com/sanjaysk64/strivelabs.git
