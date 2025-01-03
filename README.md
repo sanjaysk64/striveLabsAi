@@ -20,7 +20,7 @@ This document provides instructions for setting up and running the various servi
 3. **API Gateway**  
    Start the API Gateway after the Security service. The API Gateway will route requests to the appropriate StriLabs service and also manage security headers, such as authentication tokens.
 
-4. **StriLabs Service**  
+4. **Strive Labs Service**  
    Finally, start the StriLabs service that handles the business logic. It relies on the security and API gateway layers for communication and access control.
 
 ## Security Implementation in Microservices
