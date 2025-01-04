@@ -224,6 +224,3 @@ Note: Pass Tenant id in request header X-Tenant-ID  and its value
 
 - **Optimistic Locking**: Ensures data integrity during concurrent updates.
 - **Batch Limit**: A batch size limit of 100 is enforced to maintain performance and prevent overloading the database.
-
-## Limitations
-- No built-in authentication/authorization; tenants are identified by `tenantId` in requests.
